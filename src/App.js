@@ -25,7 +25,7 @@ export default function App() {
   // criando um novo repositorio
   async function handleAddRepository() {
     const response = await api.post("repositories", {
-      title: "Front-End com Reacjs",
+      title: "Front-End com React-Native",
       url: "https://github.com/weslley4g/REactJS",
       techs: "Reacjs, NodeJS, React-Native",
     });
@@ -42,13 +42,16 @@ export default function App() {
 
   async function handleLikeRepository(id) {
     const response = await api.post(`repositories/${id}/like`);
-    const like = response.data;
-
-    repositories.filter((repository) => {
-      if (repository.id === id) {
-        setRepositories(repository);
+    const like = response.data.likes;
+    newRepositories = [];
+    for (let i = 0; i < repositories.length; i++) {
+      const element = repositories[i];
+      if (element.id === id) {
+        element.likes = like;
       }
-    });
+      newRepositories.push(repositories[i]);
+    }
+    setRepositories(newRepositories);
   }
 
   return (
@@ -94,12 +97,15 @@ export default function App() {
             )}
           />
         </View>
-        <TouchableOpacity
-          style={styles.buttonAdd}
-          onPress={handleAddRepository}
-        >
-          <Text style={styles.buttonTextAdd}>Adicionar Repositorio</Text>
-        </TouchableOpacity>
+
+        <View>
+          <TouchableOpacity
+            style={styles.buttonAdd}
+            onPress={handleAddRepository}
+          >
+            <Text style={styles.buttonTextAdd}>Adicionar Repositorio</Text>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     </>
   );
@@ -129,7 +135,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "bold",
     marginRight: 10,
-    backgroundColor: "#04d361",
+    backgroundColor: "#ccc",
     paddingHorizontal: 10,
     paddingVertical: 5,
     color: "#fff",
@@ -154,13 +160,13 @@ const styles = StyleSheet.create({
     color: "#fff",
     backgroundColor: "#7159c1",
     padding: 15,
+    borderRadius: 20,
   },
   buttonAdd: {
     marginTop: 10,
     alignContent: "center",
     alignItems: "center",
     position: "relative",
-    flex: 1,
   },
   buttonTextAdd: {
     fontSize: 14,
@@ -176,8 +182,9 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "bold",
     marginRight: 10,
-    color: "#000",
-    backgroundColor: "#800000",
+    color: "#FFF",
+    backgroundColor: "red",
     padding: 15,
+    borderRadius: 20,
   },
 });
