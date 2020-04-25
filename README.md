@@ -22,14 +22,17 @@ Uma aplicação mobile que realiza um CRUD enviando e recebendo dados de uma API
  
   <h3>Neste desafio: </h3>
   <ul>
-  <li>Aprendi a trabalhar melhor com o <b>request</b> e o <b>response</b></li>
+  <li>Aprendi a trabalhar melhor com o response </li>
   <li>Aprendi a lidar com os <b>recursos</b> da Aplicação</li>
   <li>E de modo geral fixar na mente coisas indispensaveis tais como... 
   <b>Componentes</b>, 
   <b>Imutabilidade</b>,
   <b>fraguiments</b>, 
   <b>JSX</b>,
-  <b>API Rest</b>
+  <b>API Rest</b>,
+  <b>useState</b>,
+  <b>useEfect</b>,
+  <b>scrollList</b>
   </li>
 </ul>
 </body>
