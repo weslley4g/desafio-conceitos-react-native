@@ -13,6 +13,11 @@ Uma aplicação mobile que realiza um CRUD enviando e recebendo dados de uma API
   <body>
   <h1> Noções em React-Native </h1>
   <img src="https://www.mundojs.com.br/wp-content/uploads/2019/07/reactnative.jpg" alt="ReacctNative" >
+      
+      
+   ## Gif da Aplicação em funcionamento:
+      
+      
   <img src="prints/desafioreactNative.gif" alt="ReacctNative" height="500" width="250" >
  
   <h3>Neste desafio: </h3>
