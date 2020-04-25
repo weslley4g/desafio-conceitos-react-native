@@ -8,12 +8,12 @@ Uma aplicação mobile que realiza um CRUD enviando e recebendo dados de uma API
     <meta name="author" content="">
     <link rel="icon" href="https://weslleymendes.com.br/img/logo.png">
    <br>
-    <link rel="canonical" href="https://weslleymendes.com.br/img/logo.png">
+    <link rel="canonical" href="https://weslleymendes.com.br/img/logo.png" >
   </head>
   <body>
   <h1> Noções em React-Native </h1>
   <img src="https://www.mundojs.com.br/wp-content/uploads/2019/07/reactnative.jpg" alt="ReacctNative" >
-  <img src="prints/desafioreactNative.gif" alt="ReacctNative" >
+  <img src="prints/desafioreactNative.gif" alt="ReacctNative" height="100" width="150" >
  
   <h3>Neste desafio: </h3>
   <ul>
